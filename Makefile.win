@@ -1,0 +1,45 @@
+# Project: WebSeedAdder_CPP
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = WebSeedAdder_CPP_private.res
+OBJ  = main.o atom.o bencode.o stringsplit.o util.o $(RES)
+LINKOBJ  = main.o atom.o bencode.o stringsplit.o util.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  -s 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = WebSeedAdder-Console.exe
+CXXFLAGS = $(CXXINCS)   -O3
+CFLAGS = $(INCS)   -O3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before WebSeedAdder-Console.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "WebSeedAdder-Console.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+atom.o: atom.cpp
+	$(CPP) -c atom.cpp -o atom.o $(CXXFLAGS)
+
+bencode.o: bencode.cpp
+	$(CPP) -c bencode.cpp -o bencode.o $(CXXFLAGS)
+
+stringsplit.o: stringsplit.cpp
+	$(CPP) -c stringsplit.cpp -o stringsplit.o $(CXXFLAGS)
+
+util.o: util.cpp
+	$(CPP) -c util.cpp -o util.o $(CXXFLAGS)
+
+WebSeedAdder_CPP_private.res: WebSeedAdder_CPP_private.rc 
+	$(WINDRES) -i WebSeedAdder_CPP_private.rc --input-format=rc -o WebSeedAdder_CPP_private.res -O coff 
