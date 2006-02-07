@@ -1,0 +1,35 @@
+/* THIS FILE WILL BE OVERWRITTEN BY DEV-C++ */
+/* DO NOT EDIT! */
+
+#include <windows.h> // include for version info constants
+
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 0,1,0,1
+PRODUCTVERSION 0,1,0,1
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+	 {
+		 BLOCK "100904E4"
+		 {
+			 VALUE "CompanyName", ""
+			 VALUE "FileVersion", ""
+			 VALUE "FileDescription", "C++ WebSeed Adder"
+			 VALUE "InternalName", ""
+			 VALUE "LegalCopyright", "2006 Harold Feit. Portions Copyright 2003-2006 Trevor Hogan"
+			 VALUE "LegalTrademarks", ""
+			 VALUE "OriginalFilename", "WebSeedAdder-Console.exe"
+			 VALUE "ProductName", "C++ WebSeed Adder"
+			 VALUE "ProductVersion", ""
+		 }
+	 }
+  BLOCK "VarFileInfo"
+	 {
+		 VALUE "Translation", 0x1009, 1252
+	 }
+}
+
