@@ -15,7 +15,9 @@ int main(int argc, char *argv[])
     {
 	 	printf( "%s %s\n", FILE_DESCRIPTION, VER_STRING);
 	 	printf("You failed to include one or more required command line arguments.\n\n");
-	 	printf("WebSeedAdder-Console <Torrent File> [--include_existing] <webseeds>\n");
+	 	printf("WebSeedAdder-Console <webseeds> <Torrent File> \n");
+	 	printf("<webseeds> must contain at least one http:// address\nor the webseeds will be removed from the file.\n");
+	 	printf("If you do not include the <webseeds> paramater,\nthe file will most likely NOT be edited.\n");
     }
     else
     {
@@ -60,6 +62,8 @@ int main(int argc, char *argv[])
 		 delete pTorrent;
        }
 	}
+#ifdef WIN32
 	system("PAUSE");
+#endif
     return EXIT_SUCCESS;
 }
